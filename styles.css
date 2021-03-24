@@ -1,0 +1,136 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background: #34495e;
+  font-family: 'Poppins', serif;
+}
+
+form.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  padding: 45px;
+  width: 350px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+  border-radius: 3px;
+}
+
+.BorderTopBottom:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  top: -6px;
+  left: -7px;
+  background: #187bcd;
+  transition: all 1s ease;
+}
+
+.BorderTopBottom:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  bottom: -6px;
+  right: -7px;
+  background: #187bcd;
+  transition: all 1s ease;
+}
+
+.BorderLeftRight:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -7px;
+  width: 3px;
+  height: 75px;
+  background: #187bcd;
+  transition: all 1s ease;
+}
+
+.BorderLeftRight:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: -7px;
+  width: 3px;
+  height: 75px;
+  background: #187bcd;
+  transition: all 1s ease;
+}
+
+.box:hover .BorderTopBottom:before, .box:hover .BorderTopBottom:after {
+  width: 452px;
+  transition: all 1s ease;
+}
+
+.box:hover .BorderLeftRight:before, .box:hover .BorderLeftRight:after {
+  height: 375px;
+  transition: all 1s ease;
+}
+
+form.box h1{
+  background: linear-gradient(to right, #FCFCFC, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 5.0px;
+  font-size: 40px;
+  text-shadow: 0px 0px 5px #444;
+}
+
+form.box label{
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+form.box input[type="text"], form.box input[type="password"]{
+  text-align: center;
+  padding: 11.5px;
+  background: none;
+  border: 2px solid #3498db;
+  outline: none;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: 0.4s;
+  width: 230px;
+}
+
+form.box input[type="text"]:focus, form.box input[type="password"]:focus{
+  outline: none;
+  border: 2px solid #2ecc71;
+  width: 290px;
+}
+
+form.box input[type="checkbox"]{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: scale(1.3);
+}
+
+form.box input[type="submit"]{
+  background: none;
+  width: 100px;
+  border: 2px solid #3498db;
+  color: white;
+  padding: 12px;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+form.box input[type="submit"]:hover{
+  border: 2px solid #2ecc71;
+  background: blue;
+}
+
+form.box input[type="submit"]:focus{
+  outline: none;
+}
